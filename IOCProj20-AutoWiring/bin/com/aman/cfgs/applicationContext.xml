@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-autowire-candidates="tp" xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+<!--      default-autowire-candidates="tp,tp1" -->
+   
+<!-- <bean id="tp11" class="com.aman.beans.TourPlan"> -->
+<bean id="tp" class="com.aman.beans.TourPlan">
+<!--   <property name="insured" value="true"/> -->
+<!--   <property name="isInsured" value="true"/> -->
+  <property name="places">
+  <array>
+    <value>GOA</value>
+    <value>MUMBAI</value>
+    <value>HYDERABAD</value>
+    </array>
+  </property>
+</bean>
+
+<!--       <bean id="tp12" class="com.aman.beans.TourPlan">  -->
+<!--       <bean id="tp1" class="com.aman.beans.TourPlan" primary="true">  -->
+<!--           <bean id="tp1" class="com.aman.beans.TourPlan" autowire-candidate="true">  -->
+<!--           <bean id="tp1" class="com.aman.beans.TourPlan" autowire-candidate="false">  -->
+          <bean id="tp1" class="com.aman.beans.TourPlan"> 
+
+        <property name="places">
+           <array>
+              <value>Ahmadabad</value>
+              <value>Haryana</value>
+              <value>Banguluru</value>
+           </array>
+        </property>
+     </bean> 
+
+<!-- <bean id="tage" class="com.aman.beans.TravelAgent" autowire="default"/>  -->
+<!-- <bean id="tage" class="com.aman.beans.TravelAgent" autowire="no"/> -->
+
+<!--    <bean id="tage" class="com.aman.beans.TravelAgent" autowire="byName"/>  -->
+   
+
+
+<bean id="tage" class="com.aman.beans.TravelAgent" autowire="byName"> 
+      <constructor-arg ref="tp1"/> 
+   </bean>
+
+</beans>

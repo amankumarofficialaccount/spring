@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+   
+   <bean id="csFySt" class="com.aman.beans.EnggStudent" abstract="true">
+      <property name="subjects">
+        <set>
+           <value>Maths</value>
+           <value>Physics</value>
+           <value>Chemistry</value>
+        </set>
+      </property>
+   </bean>
+   
+   <bean id="itFySt" class="com.aman.beans.EnggStudent" parent="csFySt">
+      <property name="subjects">
+<!--                <set merge="default"> -->
+<!--              <set merge="true"> -->
+         <set merge="false">
+            <value>Communication</value>
+            <value>Environment</value>
+         </set>
+      </property>
+   </bean>
+   
+
+</beans>
