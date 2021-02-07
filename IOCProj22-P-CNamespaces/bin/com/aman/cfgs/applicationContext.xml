@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+
+<bean id="order" class="java.util.Date" p:year="2018" p:month="1" p:date="20"/>
+<bean id="join" class="java.util.Date" p:year="202" p:month="6" p:date="12"/>
+
+<!--   Dependent Bean Id -->
+  <bean id="dept" class="com.aman.beans.Department" c:deptNo="1001" c:deptName="java" c:doo-ref="order"/>
+   
+<!--    Target Bean Id -->
+   <bean id="emp" class="com.aman.beans.Employee" p:eno="101" p:ename="aman" p:doj-ref="join" p:dept-ref="dept"/>
+
+</beans>
