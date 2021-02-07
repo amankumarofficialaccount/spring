@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/LayeredAppMysqlLib"/>
+	<classpathentry kind="lib" path="/Users/amankumar/Documents/spring-udemy-practicals/javax.inject-1.jar"/>
+	<classpathentry kind="lib" path="/Users/amankumar/Documents/spring-udemy-practicals/spring-framework-5.2.8.RELEASE/libs/spring-aop-5.2.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/Users/amankumar/Documents/spring-udemy-practicals/spring-framework-5.2.8.RELEASE/libs/spring-aspects-5.2.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/Users/amankumar/Documents/spring-udemy-practicals/commons-dbcp2-2.8.0/commons-dbcp2-2.8.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
