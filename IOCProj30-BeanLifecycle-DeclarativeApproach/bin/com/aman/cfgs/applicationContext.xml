@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-init-method="myInit" default-destroy-method="myDestroy" xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+<!-- <bean id="voter" class="com.aman.beans.checkVotingEligibility" init-method="myInit1" destroy-method="myDestroy1"> -->
+<!-- <bean id="voter" class="com.aman.beans.checkVotingEligibility"> -->
+<!-- <bean id="voter" class="com.aman.beans.checkVotingEligibility" init-method="myInit" destroy-method="myDestroy" scope="singleton"> -->
+<bean id="voter" class="com.aman.beans.checkVotingEligibility" init-method="myInit1" scope="singleton">
+  <property name="name" value="aman"/>
+  <property name="age" value="25"/>
+  <property name="addrs" value="motihari"/>   
+</bean>
+
+</beans>
