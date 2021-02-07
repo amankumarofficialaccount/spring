@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+   
+   <bean id="baseBike" class="com.aman.beans.Bike" abstract="true">
+      <property name="model" value="RTR"/>
+      <property name="vendor" value="TVS"/>
+      <property name="idleSpeed" value="200km/hr"/>
+      <property name="idleMilage" value="35"/>
+      <property name="fuelTankCapacity" value="20ltr"/>      
+   </bean>
+   
+    <bean id="AmanBike" class="com.aman.beans.Bike" parent="baseBike">
+      <property name="regNo" value="ANJ4678976"/>
+      <property name="ownerName" value="Aman"/>
+      <property name="engineNo" value="1470"/>
+      <property name="color" value="White"/>
+      <property name="engineCC" value="200"/>      
+   </bean>
+   
+       <bean id="ShwetaBike" class="com.aman.beans.Bike" parent="baseBike">
+      <property name="regNo" value="ANJ4678987"/>
+      <property name="ownerName" value="Shweta"/>
+      <property name="engineNo" value="56798"/>
+      <property name="color" value="Black"/>
+      <property name="engineCC" value="125"/>      
+   </bean>
+
+</beans>

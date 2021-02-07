@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+<!-- 	Student -->
+  <bean id="st" class="com.aman.beans.Student">
+     <constructor-arg value="aman" type="java.lang.String"/>
+     <constructor-arg value="98.0f" type="float"/>
+     <constructor-arg value="101" type="int"/>
+  </bean>
+  
+  <bean id="mar" class="com.aman.beans.Marks">
+    <constructor-arg value="100" index="2"/>
+    <constructor-arg value="87" index="0"/>
+    <constructor-arg value="78" index="1"/>
+  </bean>
+  
+  <bean id="emp" class="com.aman.beans.Employee">
+<!--     <constructor-arg value="aman" index="0"/> -->
+    <constructor-arg value="aman" name="ename"/>
+    <constructor-arg value="101" name="eno"/>
+    <constructor-arg value="30000" name="sal"/>
+    <constructor-arg value="Engineer" name="desg"/>
+    <constructor-arg value="motihari" name="eadd"/>
+  </bean>
+	
+	</beans>
