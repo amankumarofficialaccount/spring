@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+   
+   
+   <bean id="bk" class="com.aman.beans.Book">
+     <property name="bookname" value="CRJ"/>
+<!--      <property name="bookid" value="101"/> -->
+     <property name="bookid" value="101"/>
+<!--      <property name="author" value="HK"/> -->
+      <property name="author" value="HK"/> 
+
+   </bean>
+   
+   <bean id="st" class="com.aman.beans.Student">
+     <property name="sid" value="1001"/>
+<!--      <property name="sname" value="aman"/> -->
+<!--       <property name="sname" value="aman"/>  -->
+<!--      <property name="doj" value="11/07/1995"/> -->
+     <property name="doj" value="11/07/1995"/> 
+     <property name="book" ref="bk"/>
+   </bean>
+   
+<!--    Bean Post Processor -->
+<!--    <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/> -->
+   <context:annotation-config></context:annotation-config>
+</beans>
