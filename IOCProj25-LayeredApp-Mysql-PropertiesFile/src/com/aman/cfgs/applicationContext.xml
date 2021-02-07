@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+  <!-- DataSource cfg -->
+  <bean id="drds"  class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+       <property name="driverClassName"  value="${jdbc.driver}"/>
+       <property name="url" value="${jdbc.url}"/>
+       <property name="username" value="${jdbc.username}"/>
+       <property name="password"  value="${jdbc.password}"/>
+  </bean>	
+  
+  
+  <!-- DAO  cfg -->
+  <bean id="stDAO"   class="com.aman.dao.StudentDAOImpl">
+     <constructor-arg  ref="drds"/>
+  </bean>
+  <!-- Service cfg -->
+  <bean id="stService"  class="com.aman.service.StudentServiceImpl">
+       <constructor-arg  ref="stDAO"/>
+  </bean>
+  <!-- Controller cfg -->
+  <bean id="controller"   class="com.aman.controller.MainController">
+      <constructor-arg  ref="stService"/>
+  </bean>
+  
+     <bean id="ppc" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+     <property name="location" value="com/aman/commons/jdbc.properties"/>
+   </bean>
+</beans>
