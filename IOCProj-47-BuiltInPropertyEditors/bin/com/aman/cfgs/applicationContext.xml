@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+    
+    <bean id="aCard" class="com.aman.beans.AadaharCardInfo">
+      <property name="aadharNo" value="4356789657"/>
+      <property name="name" value="aman"/>
+      <property name="age" value="25"/>
+      <property name="addrs" value="motihari"/>
+      <property name="dob" value="11/07/1995"/>
+      <property name="moles" value="titlets,black Heads"/>
+      <property name="locale" value="hi_IN"/>
+      <property name="linkedInURL" value="https://linkedIn.com/profile/uid=2345"/>
+      <property name="linkedInURI" value="linkedIn.com/profile/uid=2347"/>
+           <property name="favouriteLetter" value="S"/>
+           <property name="favouriteLetters" value="SA"/>
+           <property name="phones" value="4356789656,678986543"/>
+           <property name="handicapped" value="false"/>
+           <property name="fileReader" value="classpath:com/aman/cfgs/applicationContext.xml"/>
+           <property name="pattern" value=".s"/>
+           <property name="curClazz" value="java.util.Date"/>      
+    </bean>
+
+</beans>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+   
+   <bean id="usrDAO" class="com.aman.dao.UniversityDAOImpl"></bean>
+   
+   <bean id="empBO" class="com.aman.bo.EmployeeBO" scope="prototype"/>
+   <bean id="stBO" class="com.aman.bo.StudentBO" scope="prototype"/>
+   
+   <bean id="userv" class="com.aman.service.UniversityMgmtService">
+     <constructor-arg ref="usrDAO"/>
+     <lookup-method name="createStudentBO" bean="stBO"/>
+     <lookup-method name="createEmployeeBO" bean="empBO"/>
+   </bean>
+   
+<!--    <bean class="com.aman.bpp.DOJBeanPostProcessor"/> -->
+
+</beans>

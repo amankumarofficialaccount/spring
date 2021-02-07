@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+
+<!--   <bean id="iAd" class="com.aman.beans.IntrAmountDetails"> -->
+<!--     <property name="pamt" value="100000"/> -->
+<!--     <property name="rate" value="2"/> -->
+<!--     <property name="time" value="12"/> -->
+<!--   </bean> -->
+  
+  <bean id="bld" class="com.aman.beans.BankLoanDept">
+<!--      <constructor-arg ref="iAd"/> -->
+       <constructor-arg value="100000,12,2"/>
+  </bean>
+  
+<!--   CustomPropertyEditor -->
+
+       <bean id="cec" class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+             <property name="customEditors">
+               <map>
+                 <entry key="com.aman.beans.IntrAmountDetails" value="com.aman.editors.IntrAmountDetailsEditor"></entry>
+               </map>
+             </property>
+       </bean>
+
+</beans>

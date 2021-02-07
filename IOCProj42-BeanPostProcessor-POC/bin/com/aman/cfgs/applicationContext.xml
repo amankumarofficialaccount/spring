@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+  
+   <!-- Dependent Bean class cfg -->
+   <bean id="dEngg"  class="com.aman.beans.DieselEngine" scope="prototype"/>
+   <bean id="pEngg"  class="com.aman.beans.PetrolEngine"/>
+   <bean id="cEngg"  class="com.aman.beans.CNGEngine"/>
+   <!-- Target Bean class cfg -->
+   <bean id="viechle"  class="com.aman.beans.Viechle">
+       <property name="engg" ref="dEngg"/>
+   </bean>
+  
+  
+<!--   BeanPostProcessor -->
+<bean class="com.aman.bean.MyBeanPostProcessor"/>
+
+</beans>

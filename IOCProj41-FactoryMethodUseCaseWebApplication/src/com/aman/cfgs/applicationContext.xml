@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+<!--   Service Locator Class Cfg -->
+
+<bean id="locator" class="com.aman.locator.IPLScoreCompServiceLocatorFactoryBean" factory-method="getExtService">
+  <constructor-arg value="ipl"/>
+</bean>
+
+<!--        Local Service Class cfg -->
+<bean id="cbService" class="com.aman.service.CBFindScoreService">
+  <constructor-arg ref="locator"/>
+</bean>
+
+
+</beans>
